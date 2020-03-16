@@ -1,0 +1,32 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	edge [fontname=arial,fontsize=11]
+	node [fontname=arial,fontsize=11,shape=doublecircle];s19;
+	node [shape=circle,size=8]
+	start [shape=point]
+	start -> s0
+	s0 -> s1 [label=ε]
+	s0 -> s7 [label=ε]
+	s1 -> s2 [label=ε]
+	s1 -> s4 [label=ε]
+	s2 -> s3 [label=0]
+	s3 -> s6 [label=ε]
+	s4 -> s5 [label=1]
+	s5 -> s6 [label=ε]
+	s6 -> s7 [label=ε]
+	s6 -> s1 [label=ε]
+	s7 -> s8 [label=ε]
+	s8 -> s9 [label=1]
+	s9 -> s10 [label=ε]
+	s10 -> s11 [label=1]
+	s11 -> s12 [label=ε]
+	s12 -> s13 [label=0]
+	s13 -> s14 [label=ε]
+	s14 -> s15 [label=0]
+	s15 -> s16 [label=ε]
+	s16 -> s17 [label=ε]
+	s16 -> s19 [label=ε]
+	s17 -> s18 [label=1]
+	s18 -> s17 [label=ε]
+	s18 -> s19 [label=ε]
+}

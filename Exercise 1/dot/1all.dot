@@ -1,0 +1,14 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	edge [fontname=arial,fontsize=11]
+	node [fontname=arial,fontsize=11,shape=doublecircle];s3;
+	node [shape=circle,size=8]
+	start [shape=point]
+	start -> s0
+	s0 -> s1 [label=ε]
+	s0 -> s3 [label=ε]
+	s1 -> s2 [label=1]
+	s2 -> s1 [label=ε]
+	s2 -> s3 [label=ε]
+}
+

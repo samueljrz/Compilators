@@ -1,0 +1,31 @@
+Fibn: -> supondo que n está em r0
+loadI 1, r1; coloca 1 em r1
+loadI @x, r2; endereço de x em r2
+store r1, r2; carregar 1 em x, ou seja x = 1
+loadI 1, r3; a mesma coisa pra y
+loadI @y, r4;
+store r3, r4;
+loadI 1, r5; a mesma coisa pra z
+loadI @z, r6;
+store r5, r6;
+load 1, r7; coloco 1 em r7 para fazer a comparação do while n > 1
+COMP:
+	cmp_GT r0, r7, r8 faço a comparação, se for true r8 = true, caso falso é o contrario
+	cbr r8, FIB, CONT pular para as tags se r8 = true pular pra fazer o FIB, caso nao vai continuar o cod
+FIB:
+	loadI @x, r9; pego endereço de x
+	load r9, r10; carrego o valor do endereço de x em um registrador
+	loadI @y, r11; faço o mesmo pra y
+	load r11, r12;
+	add r11, r12, r13; somo os 2 e deixo em r13
+	loadI @z, r14; pego o endereço de z
+	store r13, r14; coloco na memoria referente a z x+y logo z = x+y
+	store r12, r9; coloco na memoria de x o valor de y, logo x = y
+	store r14, r11; coloco na memoria de y o valor de z, logo y = z
+	subI r0, 1, r0; subtraio 1 do n, logo n = n - 1;
+	jmpI COMP dou um jump para a comparação para continuar o while
+
+CONT:
+..............	 
+
+
