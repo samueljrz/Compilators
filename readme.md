@@ -8,8 +8,8 @@
 
 * LEX
 
-* YARN
+* YACC
 
 * ILOC
 
-#### Compilators directives are lex and yarn
+#### Compilators directives are lex and yacc
